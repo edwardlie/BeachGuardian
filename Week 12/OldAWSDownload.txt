@@ -1,0 +1,23 @@
+func obtainS3BeachGuardianImages() {
+        let downloadedFiles = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("temp.jpg")
+        let transferManager = AWSS3TransferManager.default()
+        
+        if let downloadRequest = AWSS3TransferManagerDownloadRequest(){
+            downloadRequest.bucket = s3bucket
+            downloadRequest.key = photoKey
+            downloadRequest.downloadingFileURL = downloadedFiles
+            
+            transferManager.download(downloadRequest).continueWith(block:{(task: AWSTask<AnyObject>) -> Any? in
+                if let error = task.error{} else{
+                    print(task.result!)
+                    if let data = NSData(contentsOf: downloadedFiles){
+                        DispatchQueue.main.async(execute:{
+                            self.BackgroundS3.image = UIImage(data: data as Data)
+                            self.BackgroundS3.layer.zPosition = -5
+                        })
+                    }
+                }
+                return nil
+            })
+        }
+    }

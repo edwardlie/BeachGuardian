@@ -1,0 +1,38 @@
+  //    let icon = UIImage(named: "bmiCalculator")!
+            //    button.setImage(icon, for: .normal)
+            //    button.imageView?.contentMode = .scaleAspectFit
+            //    button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -20, bottom: 0, right: 0)
+        }
+    }
+ 
+    // MARK: - Setups for camera in bottom nav bar
+    
+ //   private func setupView() {
+//        let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a source", preferredStyle:.actionSheet)
+//        actionSheet.addAction(UIAlertAction(title: "Camera", style:.default, handler:{(action: UIAlertAction) in }))
+//        actionSheet.addAction(UIAlertAction(title: "Photo Library",style: .default, handler: { (action:UIAlertAction) in}))
+//        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+//        self.present(actionSheet, animated: true, completion: nil)
+        //view.backgroundColor = .brown
+        
+//        navigationItem.title = "Modal"
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(
+//            barButtonSystemItem: .done,
+//            target: self,
+//            action: #selector(dismissController)
+//        )
+//        let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a source", preferredStyle:.actionSheet)
+//        actionSheet.addAction(UIAlertAction(title: "Camera", style:.default, handler:{(action: UIAlertAction) in }))
+//        actionSheet.addAction(UIAlertAction(title: "Photo Library",style: .default, handler: { (action:UIAlertAction) in}))
+//        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+//        self.present(actionSheet, animated: true, completion: nil)
+//    }
+    
+    
+    // MARK: - Actions for camera
+    
+//    @objc private func dismissController() {
+//        dismiss(animated: true, completion: nil)
+//    }
+    
+}
